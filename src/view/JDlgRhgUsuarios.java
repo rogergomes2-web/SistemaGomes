@@ -58,6 +58,7 @@ private void limparCampos() {
 private void habilitarBotoesInicial() {
     btnIncluir.setEnabled(true);
     btnPesquisar.setEnabled(true);
+
     btnAlterar.setEnabled(false);
     btnExcluir.setEnabled(false);
     btnConfirmar.setEnabled(false);
@@ -66,11 +67,21 @@ private void habilitarBotoesInicial() {
 
 private void habilitarBotoesEdicao() {
     btnIncluir.setEnabled(false);
+    btnPesquisar.setEnabled(false);
     btnAlterar.setEnabled(false);
     btnExcluir.setEnabled(false);
-    btnPesquisar.setEnabled(false);
+
     btnConfirmar.setEnabled(true);
     btnCancelar.setEnabled(true);
+}
+
+private void habilitarBotoesPesquisa() {
+    btnIncluir.setEnabled(true);
+    btnPesquisar.setEnabled(true);
+    btnAlterar.setEnabled(true);
+    btnExcluir.setEnabled(true);
+    btnConfirmar.setEnabled(false);
+    btnCancelar.setEnabled(false);
 }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -291,7 +302,7 @@ txtNome.requestFocus();
     }//GEN-LAST:event_btnIncluirActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-      limparCampos();
+ limparCampos();
 desabilitarCampos();
 habilitarBotoesInicial();
     }//GEN-LAST:event_btnCancelarActionPerformed
@@ -306,7 +317,16 @@ habilitarBotoesInicial();
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
     private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarActionPerformed
-javax.swing.JOptionPane.showMessageDialog(this, "Pesquisa ainda não implementada.");    
+txtIdUsuario.setText("1");
+txtNome.setText("Roger Henrique");
+txtLogin.setText("roger");
+pswSenha.setText("123");
+txtEmail.setText("roger@email.com");
+txtNivel.setText("Administrador");
+chkAtivo.setSelected(true);
+
+desabilitarCampos();
+habilitarBotoesPesquisa();
      
     }//GEN-LAST:event_btnPesquisarActionPerformed
 
@@ -317,7 +337,7 @@ txtNome.requestFocus();
     }//GEN-LAST:event_btnAlterarActionPerformed
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
-javax.swing.JOptionPane.showMessageDialog(this, "Exclusão ainda não implementada.");      
+javax.swing.JOptionPane.showMessageDialog(this, "Exclusão ainda não implementada.");    
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     /**

@@ -101,7 +101,8 @@ public class JFrmRhgPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuUsuariosActionPerformed
-        // TODO add your handling code here:
+       JDlgRhgUsuarios tela = new JDlgRhgUsuarios(this, true);
+tela.setVisible(true);
     }//GEN-LAST:event_menuUsuariosActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
