@@ -30,8 +30,61 @@ public class JFrmRhgPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar1 = new javax.swing.JMenuBar();
+        menuCadastros = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        menuMovimentos = new javax.swing.JMenu();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de Vendas - Gomes");
+
+        menuCadastros.setMnemonic('C');
+        menuCadastros.setText("Cadastros");
+
+        jMenuItem2.setMnemonic('U');
+        jMenuItem2.setText("Usuários");
+        jMenuItem2.addActionListener(this::jMenuItem2ActionPerformed);
+        menuCadastros.add(jMenuItem2);
+
+        jMenuItem1.setMnemonic('L');
+        jMenuItem1.setText("Clientes");
+        menuCadastros.add(jMenuItem1);
+
+        jMenuItem3.setMnemonic('F');
+        jMenuItem3.setText("Fornecedores");
+        menuCadastros.add(jMenuItem3);
+
+        jMenuItem4.setMnemonic('P');
+        jMenuItem4.setText("Produtos");
+        menuCadastros.add(jMenuItem4);
+
+        jMenuItem5.setMnemonic('G');
+        jMenuItem5.setText("Categorias");
+        menuCadastros.add(jMenuItem5);
+
+        jMenuBar1.add(menuCadastros);
+
+        menuMovimentos.setMnemonic('M');
+        menuMovimentos.setText("Movimentos");
+
+        jMenuItem6.setMnemonic('V');
+        jMenuItem6.setText("Vendas");
+        jMenuItem6.addActionListener(this::jMenuItem6ActionPerformed);
+        menuMovimentos.add(jMenuItem6);
+
+        jMenuItem7.setMnemonic('O');
+        jMenuItem7.setText("Compras");
+        menuMovimentos.add(jMenuItem7);
+
+        jMenuBar1.add(menuMovimentos);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -41,11 +94,19 @@ public class JFrmRhgPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 277, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -59,5 +120,15 @@ public class JFrmRhgPrincipal extends javax.swing.JFrame {
 }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenu menuCadastros;
+    private javax.swing.JMenu menuMovimentos;
     // End of variables declaration//GEN-END:variables
 }
