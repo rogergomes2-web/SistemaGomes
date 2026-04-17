@@ -57,9 +57,9 @@ private void limparCampos() {
 
 private void habilitarBotoesInicial() {
     btnIncluir.setEnabled(true);
-    btnAlterar.setEnabled(true);
-    btnExcluir.setEnabled(true);
     btnPesquisar.setEnabled(true);
+    btnAlterar.setEnabled(false);
+    btnExcluir.setEnabled(false);
     btnConfirmar.setEnabled(false);
     btnCancelar.setEnabled(false);
 }
@@ -306,7 +306,7 @@ habilitarBotoesInicial();
     }//GEN-LAST:event_btnConfirmarActionPerformed
 
     private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarActionPerformed
-    
+javax.swing.JOptionPane.showMessageDialog(this, "Pesquisa ainda não implementada.");    
      
     }//GEN-LAST:event_btnPesquisarActionPerformed
 
@@ -317,7 +317,7 @@ txtNome.requestFocus();
     }//GEN-LAST:event_btnAlterarActionPerformed
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
-      
+javax.swing.JOptionPane.showMessageDialog(this, "Exclusão ainda não implementada.");      
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     /**
