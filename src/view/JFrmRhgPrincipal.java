@@ -15,12 +15,18 @@ public class JFrmRhgPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form JFrmRhgPrincipal
      */
-    public JFrmRhgPrincipal() {
+public JFrmRhgPrincipal() {
     initComponents();
-    setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
-    setLocationRelativeTo(null);
-}
 
+    setTitle("Sistema de Gestão Comercial - Gomes");
+    setLocationRelativeTo(null);
+    setExtendedState(MAXIMIZED_BOTH);
+
+ 
+    setIconImage(new javax.swing.ImageIcon(
+        getClass().getResource("/img/produto.png")
+    ).getImage());
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,6 +36,7 @@ public class JFrmRhgPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         menuCadastros = new javax.swing.JMenu();
         menuUsuarios = new javax.swing.JMenuItem();
@@ -44,6 +51,17 @@ public class JFrmRhgPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de Vendas - Gomes");
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 904, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 577, Short.MAX_VALUE)
+        );
+
         menuCadastros.setMnemonic('C');
         menuCadastros.setText("Cadastros");
 
@@ -54,10 +72,12 @@ public class JFrmRhgPrincipal extends javax.swing.JFrame {
 
         menuClientes.setMnemonic('L');
         menuClientes.setText("Clientes");
+        menuClientes.addActionListener(this::menuClientesActionPerformed);
         menuCadastros.add(menuClientes);
 
         menuFornecedores.setMnemonic('F');
         menuFornecedores.setText("Fornecedores");
+        menuFornecedores.addActionListener(this::menuFornecedoresActionPerformed);
         menuCadastros.add(menuFornecedores);
 
         menuProdutos.setMnemonic('P');
@@ -90,24 +110,41 @@ public class JFrmRhgPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuUsuariosActionPerformed
-       JDlgRhgUsuarios tela = new JDlgRhgUsuarios(this, true);
-tela.setVisible(true);
+    
+    JDlgRhgUsuarios tela = new JDlgRhgUsuarios(this, true);
+    tela.setVisible(true);
+
     }//GEN-LAST:event_menuUsuariosActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void menuFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFornecedoresActionPerformed
+  
+    JDlgRhgFornecedores tela = new JDlgRhgFornecedores(this, true);
+    tela.setVisible(true);
+
+    }//GEN-LAST:event_menuFornecedoresActionPerformed
+
+    private void menuClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuClientesActionPerformed
+
+    JDlgRhgClientes tela = new JDlgRhgClientes(this, true);
+    tela.setVisible(true);
+    }//GEN-LAST:event_menuClientesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,6 +161,7 @@ tela.setVisible(true);
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JMenu menuCadastros;
     private javax.swing.JMenuItem menuCategorias;
     private javax.swing.JMenuItem menuClientes;

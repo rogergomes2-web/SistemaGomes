@@ -4,6 +4,8 @@
  */
 package view;
 
+
+
 /**
  *
  * @author proto
@@ -17,11 +19,11 @@ public class JDlgRhgClientes extends javax.swing.JDialog {
      * @param parent
      * @param modal
      */
- public JDlgRhgClientes(java.awt.Frame parent, boolean modal) {
+public JDlgRhgClientes(java.awt.Frame parent, boolean modal) {
     super(parent, modal);
     initComponents();
+setIconImage(new javax.swing.ImageIcon(getClass().getResource("/img/cliente.png")).getImage());
     setLocationRelativeTo(null);
-
     desabilitarCampos();
     habilitarBotoesInicial();
 }
@@ -118,36 +120,36 @@ private void habilitarBotoesPesquisa() {
     private void initComponents() {
 
         pnlDadosCliente = new javax.swing.JPanel();
-        txtEmail = new javax.swing.JTextField();
-        txtNome = new javax.swing.JTextField();
         lblIdCliente = new javax.swing.JLabel();
+        txtIdCliente = new javax.swing.JTextField();
         lblNome = new javax.swing.JLabel();
+        txtNome = new javax.swing.JTextField();
         lblCpf = new javax.swing.JLabel();
+        txtCpf = new javax.swing.JTextField();
         txtSexo = new javax.swing.JTextField();
         lblSexo = new javax.swing.JLabel();
         lblDataNascimento = new javax.swing.JLabel();
-        lblRg = new javax.swing.JLabel();
-        txtIdCliente = new javax.swing.JTextField();
-        lblEmail = new javax.swing.JLabel();
-        txtTelefone = new javax.swing.JTextField();
-        txtEndereco = new javax.swing.JTextField();
-        txtCidade = new javax.swing.JTextField();
         txtDataNascimento = new javax.swing.JTextField();
+        lblRg = new javax.swing.JLabel();
         txtRg = new javax.swing.JTextField();
+        lblEmail = new javax.swing.JLabel();
+        txtEmail = new javax.swing.JTextField();
+        txtTelefone = new javax.swing.JTextField();
+        lblTelefone = new javax.swing.JLabel();
+        txtEndereco = new javax.swing.JTextField();
+        lblEndereco = new javax.swing.JLabel();
+        txtCidade = new javax.swing.JTextField();
         lblCidade = new javax.swing.JLabel();
         lblNumero = new javax.swing.JLabel();
-        lblCep = new javax.swing.JLabel();
-        lblEstado = new javax.swing.JLabel();
-        lblTelefone = new javax.swing.JLabel();
-        lblEndereco = new javax.swing.JLabel();
-        lblAtivo = new javax.swing.JLabel();
-        lblBairro = new javax.swing.JLabel();
-        txtCpf = new javax.swing.JTextField();
-        txtCep = new javax.swing.JTextField();
-        txtBairro = new javax.swing.JTextField();
         txtNumero = new javax.swing.JTextField();
-        chkAtivo = new javax.swing.JCheckBox();
+        lblCep = new javax.swing.JLabel();
+        txtCep = new javax.swing.JTextField();
+        lblEstado = new javax.swing.JLabel();
         cmbEstado = new javax.swing.JComboBox<>();
+        lblAtivo = new javax.swing.JLabel();
+        chkAtivo = new javax.swing.JCheckBox();
+        lblBairro = new javax.swing.JLabel();
+        txtBairro = new javax.swing.JTextField();
         pnlBotoes = new javax.swing.JPanel();
         btnConfirmar = new javax.swing.JButton();
         btnIncluir = new javax.swing.JButton();
@@ -159,13 +161,17 @@ private void habilitarBotoesPesquisa() {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Clientes");
 
-        txtNome.addActionListener(this::txtNomeActionPerformed);
-
         lblIdCliente.setText("ID:");
+
+        txtIdCliente.addActionListener(this::txtIdClienteActionPerformed);
 
         lblNome.setText("Nome:");
 
+        txtNome.addActionListener(this::txtNomeActionPerformed);
+
         lblCpf.setText("CPF:");
+
+        txtCpf.addActionListener(this::txtCpfActionPerformed);
 
         txtSexo.addActionListener(this::txtSexoActionPerformed);
 
@@ -173,49 +179,46 @@ private void habilitarBotoesPesquisa() {
 
         lblDataNascimento.setText("Data Nasc. :");
 
+        txtDataNascimento.addActionListener(this::txtDataNascimentoActionPerformed);
+
         lblRg.setText("RG:");
 
-        txtIdCliente.addActionListener(this::txtIdClienteActionPerformed);
+        txtRg.addActionListener(this::txtRgActionPerformed);
 
         lblEmail.setText("Email:");
 
         txtTelefone.addActionListener(this::txtTelefoneActionPerformed);
 
+        lblTelefone.setText("Telefone:");
+
         txtEndereco.addActionListener(this::txtEnderecoActionPerformed);
 
+        lblEndereco.setText("Endereço:");
+
         txtCidade.addActionListener(this::txtCidadeActionPerformed);
-
-        txtDataNascimento.addActionListener(this::txtDataNascimentoActionPerformed);
-
-        txtRg.addActionListener(this::txtRgActionPerformed);
 
         lblCidade.setText("Cidade");
 
         lblNumero.setText("Número:");
 
+        txtNumero.addActionListener(this::txtNumeroActionPerformed);
+
         lblCep.setText("CEP:");
-
-        lblEstado.setText("Estado:");
-
-        lblTelefone.setText("Telefone:");
-
-        lblEndereco.setText("Endereço:");
-
-        lblAtivo.setText("Ativo:");
-
-        lblBairro.setText("Bairro:");
-
-        txtCpf.addActionListener(this::txtCpfActionPerformed);
 
         txtCep.addActionListener(this::txtCepActionPerformed);
 
-        txtBairro.addActionListener(this::txtBairroActionPerformed);
+        lblEstado.setText("Estado:");
 
-        txtNumero.addActionListener(this::txtNumeroActionPerformed);
+        cmbEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbEstado.addActionListener(this::cmbEstadoActionPerformed);
+
+        lblAtivo.setText("Ativo:");
 
         chkAtivo.addActionListener(this::chkAtivoActionPerformed);
 
-        cmbEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        lblBairro.setText("Bairro:");
+
+        txtBairro.addActionListener(this::txtBairroActionPerformed);
 
         javax.swing.GroupLayout pnlDadosClienteLayout = new javax.swing.GroupLayout(pnlDadosCliente);
         pnlDadosCliente.setLayout(pnlDadosClienteLayout);
@@ -422,9 +425,7 @@ private void habilitarBotoesPesquisa() {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnlBotoes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pnlDadosCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(pnlDadosCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -539,6 +540,10 @@ habilitarBotoesPesquisa();
     private void txtTelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefoneActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTelefoneActionPerformed
+
+    private void cmbEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbEstadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbEstadoActionPerformed
 
     /**
      * @param args the command line arguments

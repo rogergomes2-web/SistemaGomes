@@ -21,7 +21,7 @@ public JDlgRhgUsuarios(java.awt.Frame parent, boolean modal) {
     super(parent, modal);
     initComponents();
     setLocationRelativeTo(null);
-
+setIconImage(new javax.swing.ImageIcon(getClass().getResource("/img/usuario.png")).getImage());
     desabilitarCampos();
     habilitarBotoesInicial();
 }
