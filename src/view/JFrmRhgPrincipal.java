@@ -32,11 +32,11 @@ public class JFrmRhgPrincipal extends javax.swing.JFrame {
 
         jMenuBar1 = new javax.swing.JMenuBar();
         menuCadastros = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        menuUsuarios = new javax.swing.JMenuItem();
+        menuClientes = new javax.swing.JMenuItem();
+        menuFornecedores = new javax.swing.JMenuItem();
+        menuProdutos = new javax.swing.JMenuItem();
+        menuCategorias = new javax.swing.JMenuItem();
         menuMovimentos = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
@@ -47,26 +47,26 @@ public class JFrmRhgPrincipal extends javax.swing.JFrame {
         menuCadastros.setMnemonic('C');
         menuCadastros.setText("Cadastros");
 
-        jMenuItem2.setMnemonic('U');
-        jMenuItem2.setText("Usuários");
-        jMenuItem2.addActionListener(this::jMenuItem2ActionPerformed);
-        menuCadastros.add(jMenuItem2);
+        menuUsuarios.setMnemonic('U');
+        menuUsuarios.setText("Usuários");
+        menuUsuarios.addActionListener(this::menuUsuariosActionPerformed);
+        menuCadastros.add(menuUsuarios);
 
-        jMenuItem1.setMnemonic('L');
-        jMenuItem1.setText("Clientes");
-        menuCadastros.add(jMenuItem1);
+        menuClientes.setMnemonic('L');
+        menuClientes.setText("Clientes");
+        menuCadastros.add(menuClientes);
 
-        jMenuItem3.setMnemonic('F');
-        jMenuItem3.setText("Fornecedores");
-        menuCadastros.add(jMenuItem3);
+        menuFornecedores.setMnemonic('F');
+        menuFornecedores.setText("Fornecedores");
+        menuCadastros.add(menuFornecedores);
 
-        jMenuItem4.setMnemonic('P');
-        jMenuItem4.setText("Produtos");
-        menuCadastros.add(jMenuItem4);
+        menuProdutos.setMnemonic('P');
+        menuProdutos.setText("Produtos");
+        menuCadastros.add(menuProdutos);
 
-        jMenuItem5.setMnemonic('G');
-        jMenuItem5.setText("Categorias");
-        menuCadastros.add(jMenuItem5);
+        menuCategorias.setMnemonic('G');
+        menuCategorias.setText("Categorias");
+        menuCadastros.add(menuCategorias);
 
         jMenuBar1.add(menuCadastros);
 
@@ -100,9 +100,9 @@ public class JFrmRhgPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void menuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuUsuariosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_menuUsuariosActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         // TODO add your handling code here:
@@ -121,14 +121,14 @@ public class JFrmRhgPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenu menuCadastros;
+    private javax.swing.JMenuItem menuCategorias;
+    private javax.swing.JMenuItem menuClientes;
+    private javax.swing.JMenuItem menuFornecedores;
     private javax.swing.JMenu menuMovimentos;
+    private javax.swing.JMenuItem menuProdutos;
+    private javax.swing.JMenuItem menuUsuarios;
     // End of variables declaration//GEN-END:variables
 }
