@@ -18,13 +18,12 @@ public class JFrmRhgPrincipal extends javax.swing.JFrame {
 public JFrmRhgPrincipal() {
     initComponents();
 
-    setTitle("Sistema de Gestão Comercial - Gomes");
     setLocationRelativeTo(null);
     setExtendedState(MAXIMIZED_BOTH);
 
  
     setIconImage(new javax.swing.ImageIcon(
-        getClass().getResource("/img/produto.png")
+        getClass().getResource("/img/loja_sapatos.png")
     ).getImage());
 }
     /**
@@ -49,7 +48,7 @@ public JFrmRhgPrincipal() {
         jMenuItem7 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Sistema de Vendas - Gomes");
+        setTitle("Loja de Sapatos - Gomes");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -59,7 +58,7 @@ public JFrmRhgPrincipal() {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 577, Short.MAX_VALUE)
+            .addGap(0, 551, Short.MAX_VALUE)
         );
 
         menuCadastros.setMnemonic('C');
@@ -116,7 +115,9 @@ public JFrmRhgPrincipal() {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 26, Short.MAX_VALUE))
         );
 
         pack();
