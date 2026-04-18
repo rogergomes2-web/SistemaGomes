@@ -81,10 +81,12 @@ public JFrmRhgPrincipal() {
 
         menuProdutos.setMnemonic('P');
         menuProdutos.setText("Produtos");
+        menuProdutos.addActionListener(this::menuProdutosActionPerformed);
         menuCadastros.add(menuProdutos);
 
         menuCategorias.setMnemonic('G');
         menuCategorias.setText("Categorias");
+        menuCategorias.addActionListener(this::menuCategoriasActionPerformed);
         menuCadastros.add(menuCategorias);
 
         jMenuBar1.add(menuCadastros);
@@ -99,6 +101,7 @@ public JFrmRhgPrincipal() {
 
         jMenuItem7.setMnemonic('O');
         jMenuItem7.setText("Compras");
+        jMenuItem7.addActionListener(this::jMenuItem7ActionPerformed);
         menuMovimentos.add(jMenuItem7);
 
         jMenuBar1.add(menuMovimentos);
@@ -131,7 +134,9 @@ public JFrmRhgPrincipal() {
     }//GEN-LAST:event_menuUsuariosActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
+
+    javax.swing.JOptionPane.showMessageDialog(this, "Tela de vendas ainda não implementada.");
+
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void menuFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFornecedoresActionPerformed
@@ -147,14 +152,28 @@ public JFrmRhgPrincipal() {
     tela.setVisible(true);
     }//GEN-LAST:event_menuClientesActionPerformed
 
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+       
+    javax.swing.JOptionPane.showMessageDialog(this, "Tela de compras ainda não implementada.");
+
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void menuProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuProdutosActionPerformed
+      JDlgRhgProdutos tela = new JDlgRhgProdutos(this, true);
+tela.setVisible(true);
+    }//GEN-LAST:event_menuProdutosActionPerformed
+
+    private void menuCategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCategoriasActionPerformed
+        JDlgRhgCategorias tela = new JDlgRhgCategorias(this, true);
+tela.setVisible(true);
+    }//GEN-LAST:event_menuCategoriasActionPerformed
+
     /**
      * @param args the command line arguments
      */
    public static void main(String args[]) {
-    java.awt.EventQueue.invokeLater(new Runnable() {
-        public void run() {
-            new JFrmRhgPrincipal().setVisible(true);
-        }
+    java.awt.EventQueue.invokeLater(() -> {
+        new JFrmRhgPrincipal().setVisible(true);
     });
 }
 
